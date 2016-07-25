@@ -1,0 +1,85 @@
+<!-- Form Container -->
+<div class="row">
+  <div class="col-md-12 center BariolBold title">
+    INSCRIPCION DE NUEVOS CLIENTES FRENZY
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 formContainer">
+    <!-- Input Groups -->
+    <!-- Category Select -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Categoria&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span>
+          <select class="form-control" id="sel1" ng-model="customer.category">
+            <option value=""></option>
+            <option>Supermercado</option>
+            <option>Restaurantes</option>
+            <option>Moda</option>
+            <option>Entretenimiento</option>
+            <option>Electrónicos</option>
+            <option>Otros</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Name Customer -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Nombre del Cliente&emsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="customer.nameCustomer">
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Logo Customer -->
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Seleccionar Imágen de Cliente</h4>
+        <div class="input-group">
+          <label class="input-group-btn">
+            <span class="btn btn-default">
+              BUSCAR <input type="file" style="display: none;" id="photoCustomer">
+            </span>
+          </label>
+          <input type="text" class="form-control nameImage" readonly>
+        </div>
+      </div>
+    </div>
+    <!-- Phone Number Customer -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Número de Teléfono&emsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="customer.phoneNumber" maxlength="8">
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- URL -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Sitio WEB Oficial&emsp;&emsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="customer.url">
+        </div>
+      </div>
+    </div>
+    <!-- Send Button -->
+    <br>
+    <div class="row">
+      <div class="col-md-12 center">
+        <button class="btn btn-success" type="button" ng-click='SaveCustomer(customer)'>Guardar Promoción</button>
+      </div>
+    </div>
+    <!-- End Form Container -->
+  </div>
+  <div class="col-md-4"></div>
+</div>

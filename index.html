@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="UploadFrenzy">
+  <head>
+    <meta charset="utf-8">
+    <!-- Icon Page -->
+    <link rel="icon" href="images/frenzyIcon.jpeg">
+    <!-- Title -->
+    <title>Frenzy Upload Promotions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Sweet Alert Modal Style Framework -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/4.0.15/sweetalert2.css">
+    <!-- Date Time Picker Style -->
+    <link rel="stylesheet" href="lib/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <!-- General Container -->
+    <div class="container generalContainer">
+      <!-- Header Tab -->
+      <div class="row menu">
+        <a ui-sref="home">
+          <div class="col-md-3 center optionMenu" id="frenzySelected">
+            <img class='logoIcon' src="images/frenzy.png" alt="frenzyIcon" />
+          </div>
+        </a>
+        <a ui-sref="uploadPromotion" onclick="goToUp()">
+          <div class="col-md-3 fullHeight center optionMenu" id="promotionSelected">
+            <p class="menuContent BariolBold">Ingreso de Promociones</p>
+          </div>
+        </a>
+        <a ui-sref="uploadCoupon" onclick="goToUp()">
+          <div class="col-md-3 fullHeight center optionMenu" id="couponSelected">
+            <p class="menuContent BariolBold">Ingreso de Cupones</p>
+          </div>
+        </a>
+        <a ui-sref="uploadCustomer" onclick="goToUp()">
+          <div class="col-md-3 fullHeight center optionMenu" id="customerSelected">
+            <p class="menuContent BariolBold">Nuevos Clientes</p>
+          </div>
+        </a>
+      </div>
+      <br>
+      <!-- Ng-Route Content -->
+      <div ui-view></div>
+    </div>
+
+
+    <!-- Latest compiled and minified jQuery Core -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- Date Time Picker Framework -->
+    <script src="lib/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js"></script>
+    <!-- Firebase DB -->
+    <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+    <!-- Angular Framework -->
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <!-- SweetAlert Modal Framework -->
+    <script src="https://cdn.jsdelivr.net/sweetalert2/4.0.15/sweetalert2.js"></script>
+    <script src="controller/controller.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

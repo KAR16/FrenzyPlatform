@@ -1,0 +1,241 @@
+<!-- Form Container -->
+<div class="row">
+  <div class="col-md-12 center BariolBold title">
+    SUBIR CUPONES
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 formContainer">
+    <!-- Input Groups -->
+    <!-- Customer -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Customer&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="coupon.customer">
+        </div>
+      </div>
+    </div>
+    <!-- Provider Text -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Proveedor&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="coupon.provider">
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Category Select -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Categoria&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span>
+          <select class="form-control" id="sel1" ng-model="coupon.category">
+            <option value=""></option>
+            <option>Supermercado</option>
+            <option>Restaurantes</option>
+            <option>Moda</option>
+            <option>Entretenimiento</option>
+            <option>Electrónicos</option>
+            <option>Otros</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Category Product -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Categoria de Producto&nbsp;&nbsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="coupon.categoryProduct">
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Subcategory -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Sub Categoria&emsp;&emsp;&emsp;&emsp;&nbsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="coupon.subCategory">
+        </div>
+      </div>
+    </div>
+    <!-- Name Coupon -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Nombre de Cupón&emsp;&emsp;&nbsp;&nbsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="coupon.nameCoupon">
+        </div>
+      </div>
+    </div>
+    <!-- Presentation -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Presentación&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="coupon.presentation">
+        </div>
+      </div>
+    </div>
+    <!-- Coupon Description -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Descripción del Cupón&nbsp;&nbsp;</span>
+          <textarea class="form-control" maxlength="200" rows="4" id="comment" ng-model="coupon.couponDescription"></textarea>
+        </div>
+      </div>
+    </div>
+    <!-- Code Coupon -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Código del Cupón&emsp;&emsp;&nbsp;&nbsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="coupon.codeCoupon">
+        </div>
+      </div>
+    </div>
+    <!-- Type Coupon Select -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Tipo de Cupón&emsp;&emsp;&emsp;&emsp;</span>
+          <select class="form-control" id="sel1" ng-model="coupon.typeCoupon">
+            <option value=""></option>
+            <option value="Fecha">Fecha</option>
+            <option value="Cupon">Cupon</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Coupon Discount -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Descuento en Cupón&emsp;&nbsp;&nbsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="coupon.couponDiscount">
+        </div>
+      </div>
+    </div>
+    <!-- Quantity Coupons -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Cantidad de Cupones&emsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="coupon.quantityCoupon">
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Select Image for the Coupon -->
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Seleccionar Imágen del Cupón</h4>
+        <div class="input-group">
+          <label class="input-group-btn">
+            <span class="btn btn-default">
+              BUSCAR <input type="file" style="display: none;" id="photoCoupon">
+            </span>
+          </label>
+          <input type="text" class="form-control nameImage" readonly>
+        </div>
+      </div>
+    </div>
+    <!-- Shop Online -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Tienda en Línea&emsp;&emsp;&emsp;&nbsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="coupon.shopOnline">
+        </div>
+      </div>
+    </div>
+    <!-- Type Coupon Exchange -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Tipo de Canje&emsp;&emsp;&emsp;&emsp;</span>
+          <select class="form-control" id="sel1" ng-model="coupon.typeCouponExchange">
+            <option value=""></option>
+            <option value="directDiscount">Descuento Directo</option>
+            <option value="percentage">Porcentaje</option>
+            <option value="specialPromotion">Promoción Especial</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Terms and Conditions -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Términos y Condiciones</span>
+          <textarea class="form-control" rows="4" id="comment" ng-model="coupon.termsAndConditions"></textarea>
+        </div>
+      </div>
+    </div>
+    <!-- Publication Date -->
+    <br>
+    <div class="row">
+      <div class="col-md-12 date">
+        <div class="input-group input-append date" id="datePicker">
+          <span class="input-group-addon" id="sizing-addon1">Fecha de Publicación&emsp;&nbsp;</span>
+          <input type="text" class="form-control form_datetimeInit" name="eventDate" ng-model="coupon.publicationDate"/>
+          <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+        </div>
+      </div>
+    </div>
+    <!-- End Date -->
+    <br>
+    <div class="row">
+      <div class="col-md-12 date">
+        <div class="input-group input-append date" id="datePicker">
+          <span class="input-group-addon" id="sizing-addon1">Fecha Final de Cupón&emsp;</span>
+          <input type="text" class="form-control form_datetimeEnd" name="eventDate" ng-model="coupon.endDate"/>
+          <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+        </div>
+      </div>
+    </div>
+    <!-- Status of Coupon -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Status del Cupón&emsp;&emsp;&emsp;</span>
+          <select class="form-control" id="sel1" ng-model="coupon.status">
+            <option value=""></option>
+            <option value="true">Habilitar Cupón</option>
+            <option  value="false">Deshabilitar Cupón</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Send Button -->
+    <br>
+    <div class="row">
+      <div class="col-md-12 center">
+        <button class="btn btn-success" type="button" ng-click="SaveCoupon(coupon)">Guardar Cupón</button>
+      </div>
+    </div>
+    <!-- End Form Container -->
+  </div>
+  <div class="col-md-4"></div>
+</div>

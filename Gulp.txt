@@ -1,0 +1,6 @@
+Pasos para poder usar gulp
+npm install gulp
+npm install gulp-w3cjs
+npm install browser-sync
+
+gulp serve

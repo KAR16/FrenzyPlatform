@@ -1,0 +1,236 @@
+<!-- Form Container -->
+<div class="row">
+  <div class="col-md-12 center BariolBold title">
+    SUBIR PROMOCIONES
+  </div>
+</div>
+<br>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 formContainer">
+    <!-- Input Groups -->
+    <!-- Customer -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Customer&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span>
+          <input type="text" class="form-control" ng-model="promotion.customer" aria-describedby="sizing-addon1">
+        </div>
+      </div>
+    </div>
+    <!-- Provider Text -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Proveedor&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+          <input type="text" class="form-control" ng-model="promotion.provider" aria-describedby="sizing-addon1">
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Category Select -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Categoria&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</span>
+          <select class="form-control" id="sel1" ng-model="promotion.category">
+            <option value=""></option>
+            <option>Supermercado</option>
+            <option>Restaurantes</option>
+            <option>Moda</option>
+            <option>Entretenimiento</option>
+            <option>Electrónicos</option>
+            <option>Otros</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Category Product -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Categoria de Producto&nbsp;&nbsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="promotion.categoryProduct">
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Subcategory -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Sub Categoria&emsp;&emsp;&emsp;&emsp;&nbsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="promotion.subCategory">
+        </div>
+      </div>
+    </div>
+    <!-- Name Promotion -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Nombre de Promoción&nbsp;&nbsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="promotion.namePromotion">
+        </div>
+      </div>
+    </div>
+    <!-- Presentation -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Presentación&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="promotion.presentation">
+        </div>
+      </div>
+    </div>
+    <!-- Promotion Description -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Descripción Promoción&nbsp;</span>
+          <textarea class="form-control" maxlength="200" rows="4" id="comment" ng-model="promotion.promotionDescription"></textarea>
+        </div>
+      </div>
+    </div>
+    <!-- Type Promotion Select -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Tipo de Promoción&emsp;&emsp;&nbsp;</span>
+          <select class="form-control" id="selectPromotion" ng-model="promotion.typePromotion">
+            <option value=""></option>
+            <option value="directDiscount">Descuento Directo</option>
+            <option value="percentage">Porcentaje</option>
+            <option value="specialPromotion">Promoción Especial</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Validate type promotion -->
+    <br>
+    <div class="row">
+      <div class="col-md-12 center">
+        <button type="button" type="button" class="btn btn-info" ng-click='typePromotionValidation(promotion)'>Validar tipo de Promoción</button>
+      </div>
+    </div>
+
+    <!-- Base Price -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Precio Base&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;</span>
+          <input type="text" class="form-control" id="basePrice" aria-describedby="sizing-addon1" ng-model="promotion.basePrice" disabled>
+        </div>
+      </div>
+    </div>
+    <!-- Promotional Price -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Precio Promocional&emsp;&nbsp;&nbsp;&nbsp;</span>
+          <input type="text" class="form-control" id="promotionalPrice" aria-describedby="sizing-addon1" ng-model="promotion.promotionalPrice" disabled>
+        </div>
+      </div>
+    </div>
+    <!-- Percentage -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Porcentaje Descuento&emsp;</span>
+          <input type="text" class="form-control" id="percentageOfDiscount" aria-describedby="sizing-addon1" ng-model="promotion.percentageOfDiscount" disabled>
+          <span class="input-group-addon">%</span>
+        </div>
+      </div>
+    </div>
+    <br>
+    <!-- Select Image for the Promotion -->
+    <div class="row">
+      <div class="col-md-12">
+        <h4>Seleccionar Imágen de Promoción</h4>
+        <div class="input-group">
+          <label class="input-group-btn">
+            <span class="btn btn-default">
+              BUSCAR<input type="file" style="display: none;" id="photoPromotion">
+            </span>
+          </label>
+          <input type="text" class="form-control nameImage" readonly>
+        </div>
+      </div>
+    </div>
+    <!-- Shop Online -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Tienda en Línea&emsp;&emsp;&emsp;&nbsp;</span>
+          <input type="text" class="form-control" aria-describedby="sizing-addon1" ng-model="promotion.shopOnline">
+        </div>
+      </div>
+    </div>
+    <!-- Terms and Conditions -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Términos y Condiciones</span>
+          <textarea class="form-control" rows="4" id="comment" ng-model="promotion.termsAndConditions"></textarea>
+        </div>
+      </div>
+    </div>
+    <!-- Publication Date -->
+    <br>
+    <div class="row">
+      <div class="col-md-12 date">
+        <div class="input-group input-append">
+          <span class="input-group-addon" id="sizing-addon1">Fecha de Publicación&emsp;&nbsp;</span>
+          <input type="text" class="form-control form_datetimeInit" name="date" placeholder="DD/MM/YYYY" ng-model="promotion.publicationDate"/>
+          <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar date"></span></span>
+        </div>
+      </div>
+    </div>
+    <!-- End Date -->
+    <br>
+    <div class="row">
+      <div class="col-md-12 date">
+        <div class="input-group input-append date" id="datePicker">
+          <span class="input-group-addon" id="sizing-addon1">Fecha Final de Promo&emsp;</span>
+          <input type="text" class="form-control form_datetimeEnd" name="eventDate"  placeholder="DD/MM/YYYY" ng-model="promotion.endDate"/>
+          <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+        </div>
+      </div>
+    </div>
+    <!-- Status of Promotion -->
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group">
+          <span class="input-group-addon" id="sizing-addon1">Status de Promoción&emsp;&nbsp;&nbsp;</span>
+          <select class="form-control" id="sel1" ng-model="promotion.status">
+            <option value=""></option>
+            <option value="true">Habilitar Promo</option>
+            <option value="false">Deshabilitar Promo</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Send Button -->
+    <br>
+    <div class="row">
+      <div class="col-md-12 center">
+        <button class="btn btn-success" type="button" ng-click='SavePromotion(promotion)'>Guardar Promoción</button>
+      </div>
+    </div>
+    <!-- End Form Container -->
+  </div>
+  <div class="col-md-4"></div>
+</div>
