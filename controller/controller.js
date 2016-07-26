@@ -1,20 +1,20 @@
 // Connect with Frenzy App from Firebase
-var config = {
+var FrenzyAppConfig = {
   apiKey: "AIzaSyCUqP6x0IvLoT6axpmvD6kRgBgDR2ta_fQ",
   authDomain: "frenesi.firebaseapp.com",
   databaseURL: "https://frenesi.firebaseio.com",
   storageBucket: "project-7399883062634803105.appspot.com",
 };
 // Connect with Frenzy Dashboard from Firebase
-var config2 = {
+var FrenzyDashboardConfig = {
   apiKey: "AIzaSyCd9OVUg8iEvaKRulLEWPnnqbgO6_V-DSU",
   authDomain: "dashboardfrenzy.firebaseapp.com",
   databaseURL: "https://dashboardfrenzy.firebaseio.com",
   storageBucket: "dashboardfrenzy.appspot.com",
 };
 
-var FrenzyApp =  firebase.initializeApp(config);
-var FrenzyDashboard = firebase.initializeApp(config2, "Secondary");
+var FrenzyApp =  firebase.initializeApp(FrenzyAppConfig);
+var FrenzyDashboard = firebase.initializeApp(FrenzyDashboardConfig, "Secondary");
 
 var UploadFrenzy = angular.module('UploadFrenzy', ['ui.router']);
 
@@ -106,17 +106,19 @@ UploadFrenzy.controller('promotionCtrl', function($scope, $state) {
 
   // Publication Date Promotion
   $(".form_datetimeInit").datetimepicker({
-      format: "dd MM yyyy - HH:ii P",
+      format: 'dd/mm/yyyy '+'-'+' hh:mm:ss',
       showMeridian: true,
       autoclose: true,
-      todayBtn: true
+      todayBtn: true,
+      language: 'pt-BR'
   });
   // End Date Promotion
   $(".form_datetimeEnd").datetimepicker({
-      format: "dd MM yyyy - HH:ii P",
+      format: 'dd/mm/yyyy '+'-'+' hh:mm:ss',
       showMeridian: true,
       autoclose: true,
-      todayBtn: true
+      todayBtn: true,
+      language: 'pt-BR'
   });
 
   $(window).on('load', function(){
@@ -273,14 +275,14 @@ UploadFrenzy.controller('CouponCtrl', function($scope, $state) {
 
   // Publication Date Coupon
   $(".form_datetimeInit").datetimepicker({
-      format: "dd MM yyyy - HH:ii P",
+      format: 'dd/mm/yyyy '+'-'+' hh:mm:ss',
       showMeridian: true,
       autoclose: true,
       todayBtn: true
   });
   // End Date Coupon
   $(".form_datetimeEnd").datetimepicker({
-      format: "dd MM yyyy - HH:ii P",
+      format: 'dd/mm/yyyy '+'-'+' hh:mm:ss',
       showMeridian: true,
       autoclose: true,
       todayBtn: true
@@ -318,6 +320,9 @@ UploadFrenzy.controller('CouponCtrl', function($scope, $state) {
     $scope.termsAndConditions = coupon.termsAndConditions;
     $scope.typeCoupon = coupon.typeCoupon;
     $scope.typeCouponExchange = coupon.typeCouponExchange;
+
+    $scope.endDate = moment($scope.endDate).format('DD/MM/YYYY - HH:mm:ss');
+    $scope.publicationDate = moment($scope.publicationDate).format('DD/MM/YYYY - HH:mm:ss');
 
     // Validate if the values are undefined
     if($scope.couponDiscount == undefined){
