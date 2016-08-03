@@ -25,9 +25,9 @@ gulp.task('csslint', function() {
 });
 
 gulp.task('lint', function() {
-  return gulp.src('js/*.js')
+  return gulp.src('./lib/*.js')
     .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
+    .pipe(jshint.reporter('jshint-stylish'));
 });
 
 // Watch Files For Changes & Reload
