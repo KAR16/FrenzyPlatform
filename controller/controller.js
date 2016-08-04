@@ -147,6 +147,25 @@ UploadFrenzy.controller('promotionCtrl', function($scope, $state) {
 
   }
 
+  /* Llamamamos loas datos de customer y creamos el json que almancenara los conteos de proomos, cupones y el promedio */
+  FrenzyDashboard.database().ref('Customer').once('value', function(customerData) {
+    var dictionary = [];
+    var counter = 0;
+    for (var i in customerData.val()) {
+      dictionary[counter]=customerData.val()[i]['Name'];
+      counter++;
+    }
+    $scope.CustomerArray = dictionary;
+    $scope.CustomerArray.sort();
+  }).then(function() {
+    var CostumerSelect = document.getElementById("NameCostumer");
+    for (var i in $scope.CustomerArray) {
+      var option = document.createElement("option");
+      option.text = $scope.CustomerArray[i];
+      CostumerSelect.add(option);
+    }
+  })
+
   // Upload Promotion Function
   $scope.SavePromotion = function(promotion) {
 
@@ -157,7 +176,7 @@ UploadFrenzy.controller('promotionCtrl', function($scope, $state) {
       showConfirmButton: false
     })
 
-    $scope.customer = promotion.customer;
+    $scope.customer = promotion.provider;
     $scope.provider = promotion.provider;
     $scope.category = promotion.category;
     $scope.categoryProduct = promotion.categoryProduct;
@@ -294,6 +313,25 @@ UploadFrenzy.controller('CouponCtrl', function($scope, $state) {
     $state.go('loading')
   });
 
+  /* Llamamamos loas datos de customer y creamos el json que almancenara los conteos de proomos, cupones y el promedio */
+  FrenzyDashboard.database().ref('Customer').once('value', function(customerData) {
+    var dictionary = [];
+    var counter = 0;
+    for (var i in customerData.val()) {
+      dictionary[counter]=customerData.val()[i]['Name'];
+      counter++;
+    }
+    $scope.CustomerArray = dictionary;
+    $scope.CustomerArray.sort();
+  }).then(function() {
+    var CostumerSelect = document.getElementById("NameCostumerCoupon");
+    for (var i in $scope.CustomerArray) {
+      var option = document.createElement("option");
+      option.text = $scope.CustomerArray[i];
+      CostumerSelect.add(option);
+    }
+  })
+
   // Upload Coupon Function
   $scope.SaveCoupon = function(coupon) {
 
@@ -309,7 +347,7 @@ UploadFrenzy.controller('CouponCtrl', function($scope, $state) {
     $scope.codeCoupon = coupon.codeCoupon;
     $scope.couponDescription = coupon.couponDescription;
     $scope.couponDiscount = coupon.couponDiscount;
-    $scope.customer = coupon.customer;
+    $scope.customer = coupon.provider;
     $scope.endDate = coupon.endDate;
     $scope.nameCoupon = coupon.nameCoupon;
     $scope.presentation = coupon.presentation;
